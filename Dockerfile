@@ -1,1 +1,42 @@
-FROM alpine
+FROM squidfunk/mkdocs-material:5.1.1 as material
+
+FROM ubuntu:bionic
+
+LABEL maintainer="Lukas Holota <me@lholota.com>"
+LABEL io.homecentr.dependency-version=5.1.1
+
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+ADD https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/requirements.txt /tmp/requirements.txt
+ADD https://github.com/jgraph/drawio-desktop/releases/download/v12.9.13/draw.io-amd64-12.9.13.deb /tmp/drawio.deb
+
+COPY --from=material /usr/local/bin/mkdocs /usr/local/bin/mkdocs
+
+RUN apt-get update && \
+    apt install /tmp/drawio.deb -y && \
+    apt install -y libasound2 xvfb python3-pip git
+
+WORKDIR /tmp
+
+RUN git clone https://github.com/squidfunk/mkdocs-material
+
+WORKDIR /tmp/mkdocs-material
+
+RUN pip3 install --no-cache-dir . && \
+    pip3 install --no-cache-dir \
+                mkdocs-drawio-exporter==0.6.1 \
+                mkdocs-minify-plugin==0.3.0 \
+                mkdocs-git-revision-date-localized-plugin==0.5.0 \
+                mkdocs-awesome-pages-plugin==2.2.1
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+RUN rm -rf /tmp/** && chmod a+x /entrypoint.sh
+
+
+WORKDIR /docs
+
+EXPOSE 8000
+
+ENTRYPOINT [ "/entrypoint.sh" ]
