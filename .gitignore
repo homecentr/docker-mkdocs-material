@@ -6,6 +6,8 @@
 build
 .gradletasknamecache
 
+**/drawio-exporter
+
 **/.idea/workspace.xml
 **/.idea/tasks.xml
 
