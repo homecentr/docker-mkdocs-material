@@ -13,9 +13,18 @@ ADD https://github.com/jgraph/drawio-desktop/releases/download/v12.9.13/draw.io-
 
 COPY --from=material /usr/local/bin/mkdocs /usr/local/bin/mkdocs
 
+    # Install the downloaded package and dependencies required for headless execution
+    # hadolint ignore=DL3015,DL3008
 RUN apt-get update && \
-    apt install /tmp/drawio.deb -y && \
-    apt install -y libasound2 xvfb python3-pip git
+    apt-get install --no-install-recommends /tmp/drawio.deb -y && \
+    apt-get install -y \
+        libasound2 \
+        xvfb \
+        python3-pip \
+        git && \
+    # Clean up apt cache
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp
 
