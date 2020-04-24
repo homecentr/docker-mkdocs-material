@@ -2,7 +2,7 @@ version: "3.7"
 services:
   mkdocs:
     build: .
-    image: homecentr/mkdocs:local
+    image: homecentr/mkdocs-material:local
     volumes:
       - ./example:/docs
     ports:

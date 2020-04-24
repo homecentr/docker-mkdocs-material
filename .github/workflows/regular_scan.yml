@@ -4,7 +4,7 @@ on:
     - cron: '0 6 * * *'
 
 env:
-  IMAGE_NAME: "homecentr/mkdocs"
+  IMAGE_NAME: "homecentr/mkdocs-material"
 
 jobs:
   build:
