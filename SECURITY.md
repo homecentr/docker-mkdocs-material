@@ -1,3 +1,15 @@
-This repository covers the security of the container itself which is scanned for vulnerabilities every 24 hours. You can see the scan status in the [actions tab](https://github.com/homecentr/docker-mkdocs-material/actions?query=workflow%3A%22Regular+Docker+image+vulnerability+scan%22).
+# Security policy
 
-The dependencies are automatically scanned using [Dependabot](https://dependabot.com/). Dependencies are regularly updated. You can check the status by listing [open Pull requests](https://github.com/homecentr/docker-mkdocs-material/labels/dependencies) with the dependencies label.
+## Disclosure policy
+
+In case you find a security issues with this docker image, please reach out to me at security@homecentr.io and provide 5 business days to release a fixed version.
+
+## Security update policy
+
+Known security issues will be published in GitHub repository's Security / Security advisories.
+
+## Automated processes
+
+The Docker image is scanned for vulnerabilities every 24 hours using [Phonito.io](https://phonito.io/?b=a). You can see the scan status under the actions tab / Regular Docker image vulnerability scan.
+
+The dependencies are automatically scanned using [Dependabot](https://dependabot.com/). Dependencies are regularly updated. You can check for pending dependency updates by listing open Pull requests with the "dependencies" label.
