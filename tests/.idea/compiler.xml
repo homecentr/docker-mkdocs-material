@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="mkdocs-tests.main" target="1.8" />
-      <module name="mkdocs-tests.test" target="1.8" />
+      <module name="mkdocs-material-tests.main" target="1.8" />
+      <module name="mkdocs-material-tests.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

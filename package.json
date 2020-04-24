@@ -4,12 +4,12 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/homecentr/docker-mkdocs.git"
+    "url": "git+https://github.com/homecentr/docker-mkdocs-material.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/homecentr/docker-mkdocs/issues"
+    "url": "https://github.com/homecentr/docker-mkdocs-material/issues"
   },
-  "homepage": "https://github.com/homecentr/docker-mkdocs#readme"
+  "homepage": "https://github.com/homecentr/docker-mkdocs-material#readme"
 }

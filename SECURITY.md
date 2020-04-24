@@ -1,0 +1,3 @@
+This repository covers the security of the container itself which is scanned for vulnerabilities every 24 hours. You can see the scan status in the [actions tab](https://github.com/homecentr/docker-mkdocs-material/actions?query=workflow%3A%22Regular+Docker+image+vulnerability+scan%22).
+
+The dependencies are automatically scanned using [Dependabot](https://dependabot.com/). Dependencies are regularly updated. You can check the status by listing [open Pull requests](https://github.com/homecentr/docker-mkdocs-material/labels/dependencies) with the dependencies label.
