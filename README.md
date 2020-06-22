@@ -1,11 +1,9 @@
-[![Project status](https://img.shields.io/badge/Project%20status-stable%20%26%20actively%20maintaned-green.svg)](https://github.com/homecentr/docker-mkdocs-material/graphs/commit-activity) 
-[![](https://img.shields.io/github/issues-raw/homecentr/docker-mkdocs-material/bug?label=open%20bugs)](https://github.com/homecentr/docker-mkdocs-material/labels/bug) 
-[![](https://images.microbadger.com/badges/version/homecentr/mkdocs-material.svg)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material)
-[![](https://img.shields.io/docker/pulls/homecentr/mkdocs-material.svg)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material) 
-[![](https://img.shields.io/docker/image-size/homecentr/mkdocs-material/latest)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material)
+[![Project status](https://badgen.net/badge/project%20status/stable%20%26%20actively%20maintaned?color=green)](https://github.com/homecentr/docker-mkdocs-material/graphs/commit-activity) [![](https://badgen.net/github/label-issues/homecentr/docker-mkdocs-material/bug?label=open%20bugs&color=green)](https://github.com/homecentr/docker-mkdocs-material/labels/bug) [![](https://badgen.net/github/release/homecentr/docker-mkdocs-material)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material)
+[![](https://badgen.net/docker/pulls/homecentr/mkdocs-material)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material) 
+[![](https://badgen.net/docker/size/homecentr/mkdocs-material)](https://hub.docker.com/repository/docker/homecentr/mkdocs-material)
 
-![CI/CD on master](https://github.com/homecentr/docker-mkdocs/workflows/CI/CD%20on%20master/badge.svg)
-![Regular Docker image vulnerability scan](https://github.com/homecentr/docker-mkdocs/workflows/Regular%20Docker%20image%20vulnerability%20scan/badge.svg)
+![CI/CD on master](https://github.com/homecentr/docker-mkdocs-material/workflows/CI/CD%20on%20master/badge.svg)
+![Regular Docker image vulnerability scan](https://github.com/homecentr/docker-mkdocs-material/workflows/Regular%20Docker%20image%20vulnerability%20scan/badge.svg)
 
 
 # HomeCentr - mkdocs material
