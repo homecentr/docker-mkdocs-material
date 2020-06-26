@@ -38,7 +38,7 @@ RUN pip3 install --no-cache-dir . && \
                 mkdocs-minify-plugin==0.3.0 \
                 mkdocs-git-revision-date-localized-plugin==0.5.0 \
                 mkdocs-awesome-pages-plugin==2.2.1 \
-                git+git://github.com/andyoakley/mkdocs-jinja2@2a72c7dfad9d29b43f55f82f57c093023062a2e0
+                git+https://github.com/andyoakley/mkdocs-jinja2@2a72c7dfad9d29b43f55f82f57c093023062a2e0
 
 COPY ./entrypoint.sh /entrypoint.sh
 
