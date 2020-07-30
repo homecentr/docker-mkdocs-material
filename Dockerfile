@@ -21,7 +21,9 @@ RUN apt-get update && \
         libasound2 \
         xvfb \
         python3-pip \
-        git
+        git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp
 
