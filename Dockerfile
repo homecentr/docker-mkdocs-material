@@ -1,6 +1,6 @@
 FROM squidfunk/mkdocs-material:5.3.3 as material
 
-FROM ubuntu:bionic
+FROM alpine:3.12.0
 
 LABEL maintainer="Lukas Holota <me@lholota.com>"
 LABEL io.homecentr.dependency-version=5.1.1
@@ -21,10 +21,7 @@ RUN apt-get update && \
         libasound2 \
         xvfb \
         python3-pip \
-        git && \
-    # Clean up apt cache
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+        git
 
 WORKDIR /tmp
 
@@ -43,6 +40,11 @@ RUN pip3 install --no-cache-dir . && \
 COPY ./entrypoint.sh /entrypoint.sh
 
 RUN rm -rf /tmp/** && chmod a+x /entrypoint.sh
+
+RUN apt-get remove -y binutils git && \
+    # Clean up apt cache
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /docs
 
