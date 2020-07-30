@@ -48,6 +48,7 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
+          fail-level: 'HIGH'
 
       - name: "Tag image as latest"
         if: env.RELEASE_VERSION != ''
