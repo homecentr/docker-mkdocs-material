@@ -18,6 +18,7 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}:latest
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
+          fail-level: 'HIGH'
 
       - name: Scan with Snyk
         uses: snyk/actions/docker@0.1.1

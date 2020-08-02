@@ -36,6 +36,7 @@ jobs:
         uses: phonito/phonito-scanner-action@master
         with:
           image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
+          fail-level: 'HIGH'
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
 
       - name: Scan with Snyk
