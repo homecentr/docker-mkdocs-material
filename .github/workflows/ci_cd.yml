@@ -57,6 +57,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: ${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
+          args: --severity-threshold=high
 
       - name: "Tag image as latest"
         if: env.RELEASE_VERSION != ''

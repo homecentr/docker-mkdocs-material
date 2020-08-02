@@ -45,3 +45,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
+          args: --severity-threshold=high
