@@ -22,7 +22,9 @@ RUN apt-get update && \
         xvfb=2:1.19.6-1ubuntu4.4 \
         python3-pip=9.0.1-2.3~ubuntu1.18.04.1 \
         python3=3.6.7-1~18.04 \
-        git=1:2.17.1-1ubuntu0.7 && \
+        git=1:2.17.1-1ubuntu0.7 \
+        # Required by draw.io
+        glib-networking=2.56.0-1ubuntu0.1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -43,9 +45,11 @@ RUN pip3 install --no-cache-dir setuptools==49.2.0 && \
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-RUN rm -rf /tmp/** && chmod a+x /entrypoint.sh
+# rm -rf /tmp/** &&
+RUN chmod a+x /entrypoint.sh
 
-RUN apt-get remove --purge -y binutils git perl patch openssl bzip2 procps glib-networking && \
+RUN apt-get remove --purge -y binutils git perl patch openssl bzip2 procps && \
+    #glib-networking 
     apt-get autoremove -y && \
     # Clean up apt cache
     apt-get clean && \
