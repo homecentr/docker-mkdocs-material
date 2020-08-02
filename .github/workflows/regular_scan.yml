@@ -18,3 +18,4 @@ jobs:
         with:
           image: ${{ env.IMAGE_NAME }}:latest
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
+          fail-level: 'HIGH'
