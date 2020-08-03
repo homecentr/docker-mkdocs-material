@@ -6,7 +6,9 @@ In case you find a security issues with this docker image, please reach out to m
 
 ## Security update policy
 
-Known security issues will be published in GitHub repository's Security / Security advisories.
+Known security issues will be published in GitHub repository's Security / Security advisories. The security issues are published according to the output from Phonito.io scan. 
+
+Due to the fact that this image is based on Ubuntu (Alpine unfortunately does not contain the libraries required for Draw.io rendering), there are other low severity vulnerabilities detected by Snyk and other apps which currently do not have a solution (e.g. the package does not have a newer version which would fix the problem). Due to the number of issues, this repository will report/treat as failure vulnerabilities with severity High or Critical.
 
 ## Automated processes
 
