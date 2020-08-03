@@ -38,3 +38,11 @@ jobs:
           image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
           fail-level: 'HIGH'
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
+
+      - name: Scan with Snyk
+        uses: snyk/actions/docker@0.1.1
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
+          args: --severity-threshold=high

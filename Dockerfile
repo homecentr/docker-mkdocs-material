@@ -49,7 +49,6 @@ COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 
 RUN apt-get remove --purge -y binutils git perl patch openssl bzip2 procps && \
-    #glib-networking 
     apt-get autoremove -y && \
     # Clean up apt cache
     apt-get clean && \
