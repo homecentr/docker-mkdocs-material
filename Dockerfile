@@ -1,6 +1,6 @@
 FROM squidfunk/mkdocs-material:5.5.2 as material
 
-FROM ubuntu:bionic-20200713
+FROM ubuntu:bionic-20200807
 
 LABEL maintainer="Lukas Holota <me@lholota.com>"
 LABEL io.homecentr.dependency-version=5.1.1
