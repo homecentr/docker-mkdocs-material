@@ -53,6 +53,7 @@ jobs:
       - name: Scan with Snyk
         if: env.RELEASE_VERSION != ''
         uses: snyk/actions/docker@0.3.0
+        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
