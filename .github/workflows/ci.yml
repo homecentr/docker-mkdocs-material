@@ -39,11 +39,11 @@ jobs:
           fail-level: 'HIGH'
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
 
-      # Disabled temporarily, image contains high severity issue which does not have a fix yet
-      # - name: Scan with Snyk
-      #   uses: snyk/actions/docker@0.1.1
-      #   env:
-      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      #   with:
-      #     image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
-      #     args: --severity-threshold=high
+      - name: Scan with Snyk
+        uses: snyk/actions/docker@0.1.1
+        continue-on-error: true # Errors ignored, the image contains high severity issue which does not have a fix yet
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
+          args: --severity-threshold=high
