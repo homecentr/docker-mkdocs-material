@@ -19,9 +19,11 @@ RUN apt-get update && \
     apt-get install --no-install-recommends /tmp/drawio.deb -y && \
     apt-get install -y --no-install-recommends \
         libasound2=1.1.3-5ubuntu0.5 \
-        xvfb=2:1.19.6-1ubuntu4.4 \
-        python3-pip=9.0.1-2.3~ubuntu1.18.04.1 \
+        xvfb=2:1.19.6-1ubuntu4.7 \
+        python3-pip=9.0.1-2 \
+        python-pip-whl=9.0.1-2 \
         python3=3.6.7-1~18.04 \
+        python3-distutils=3.6.5-3 \
         git=1:2.17.1-1ubuntu0.7 \
         # Required by draw.io
         glib-networking=2.56.0-1ubuntu0.1 && \
