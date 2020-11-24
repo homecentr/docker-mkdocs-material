@@ -40,7 +40,7 @@ jobs:
           phonito-token: '${{ secrets.PHONITO_TOKEN }}'
 
       - name: Scan with Snyk
-        uses: snyk/actions/docker@0.1.1
+        uses: snyk/actions/docker@0.3.0
         continue-on-error: true # Errors ignored, the image contains high severity issue which does not have a fix yet
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
