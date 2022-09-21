@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:6.1.6 as material
+FROM squidfunk/mkdocs-material:8.5.3 as material
 
 FROM ubuntu:bionic-20200921
 
